@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* BACKGROUND */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #3a1c71, #000);
+  z-index: -1;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.9);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.menu-btn {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: black;
+  border-radius: 10px;
+}
+
+nav a {
+  display: block;
+  padding: 12px 18px;
+  color: white;
+  text-decoration: none;
+}
+
+/* SECTIONS */
+main {
+  padding-top: 100px;
+  max-width: 1100px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+section {
+  margin-bottom: 90px;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+p {
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+}
+
+.math-symbols span {
+  display: inline-block;
+  margin: 10px;
+  font-size: 26px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* BLOCKS */
+.blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 20px;
+}
+
+.block {
+  padding: 30px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 14px;
+  text-align: center;
+  animation: float 6s infinite;
+}
+
+/* ECOSYSTEM */
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.slider img {
+  width: 260px;
+  border-radius: 16px;
+}
+
+/* TOKENOMICS */
+.token-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+
+.token-grid div {
+  padding: 30px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 14px;
+  text-align: center;
+}
+
+/* LINKS */
+.link {
+  display: inline-block;
+  margin-top: 12px;
+  color: white;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.socials span {
+  margin: 0 10px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  h1 { font-size: 30px; }
+  h2 { font-size: 22px; }
+  .slider img { width: 200px; }
+}
